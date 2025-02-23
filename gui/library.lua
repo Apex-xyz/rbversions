@@ -182,7 +182,7 @@ function nostudio(func)
 end
 
 function ismobile()
-	return ((InputService.KeyboardEnabled == false) and (InputService.TouchEnabled == true) and (InputService.MouseEnabled == false))
+	return ((InputService.KeyboardEnabled == false) and (InputService.TouchEnabled == true))
 end
 if library.Debug then
 	warn(ismobile())
