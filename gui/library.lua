@@ -197,7 +197,7 @@ function BindToClick(obj, func)
 		hover = false
 	end)
 	InputService.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.Touch and hover then
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and hover then
 			func()
 		end
 	end)
