@@ -189,26 +189,18 @@ if library.Debug then
 end
 
 function BindToClick(obj, func)
-	if not ismobile() then
-		InputService.InputBegan:Connect(function(input, gpe)
-			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and obj.GuiState == Enum.GuiState.Press and not gpe then
-				func()
-			end
-		end)
-	else
-		local hover = false
-		obj.MouseEnter:Connect(function()
-			hover = true
-		end)
-		obj.MouseLeave:Connect(function()
-			hover = false
-		end)
-		InputService.InputBegan:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.Touch and hover then
-				func()
-			end
-		end)
-	end
+	local hover = false
+	obj.MouseEnter:Connect(function()
+		hover = true
+	end)
+	obj.MouseLeave:Connect(function()
+		hover = false
+	end)
+	InputService.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.Touch and hover then
+			func()
+		end
+	end)
 end
 
 function Create(class: string, props: table, children: table): Instance
