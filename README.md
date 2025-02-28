@@ -3,7 +3,7 @@ Versions for the roblox script Apex Hub
 
 ## Main Games
 
-Ability Wars | V3.0.2
+Ability Wars | V3.0.4
  1. Home
  2. Combat
  3. Exploit
