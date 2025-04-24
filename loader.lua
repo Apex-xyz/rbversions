@@ -1,5 +1,4 @@
--- No Skidding this time
--- Dump my script = you're a bozo 🤡🤡🤡🤡
+-- Imagine skidding
 pcall(function()
   local function check(r)
     return identifyexecutor():lower():find(r)
